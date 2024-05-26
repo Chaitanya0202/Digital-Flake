@@ -13,22 +13,26 @@ const SubCategory = () => {
     const initialData = [
         {
             id: 1,
-            product_name: 'Mobile',
-            Sub_Category: 'Motorola',
+            category: 'Mobile',
+            sub_category: 'Motorola',
+             product_name   : 'Motorola Edge',
             image: mobile,
             status: 'Active',
         },
         {
             id: 2,
-            product_name: 'Laptop',
-            Sub_Category: 'HP',
+            category: 'Laptop',
+            sub_category: 'HP',
+            product_name:"HP Pavellion",
             image: laptop,
             status: 'Inactive',
         },
         {
             id: 3,
-            product_name: 'ABC Froots',
-            Sub_Category: 'Fresh',
+            category: 'ABC Froots',
+
+            sub_category: 'Fresh',
+            product_name:"SomeThing",
             image: froot,
             status: 'Active',
         },
@@ -87,13 +91,12 @@ const SubCategory = () => {
                 </Link>
             </div>
             <div className="overflow-x-auto shadow-lg rounded-lg">
-                <table className="table-auto w-full border border-gray-200">
-                <thead className=""style={{backgroundColor:"#FFF9C4"}}>
+            <table className="table-auto w-full border border-gray-200">
+                    <thead className=""style={{backgroundColor:"#FFF9C4"}}>
                         <tr>
                             <th className="px-4 py-2">ID</th>
+                            <th className="px-4 py-2">Category</th>
                             <th className="px-4 py-2">Sub Category</th>   
-                            <th className="px-4 py-2">Category</th>   
-                            {/* <th className="px-4 py-2">Product Name</th> */}
                             <th className="px-4 py-2">Image</th>
                             <th className="px-4 py-2">Status</th>
                             <th className="px-4 py-2">Action</th>
@@ -105,7 +108,6 @@ const SubCategory = () => {
                                 <td className="border px-4 py-2">
                                     {item.id.toString().slice(-3)}
                                 </td>
-                                {/* <td className="border px-4 py-2">{item.product_name}</td> */}
                                 <td className="border px-4 py-2">{item.category}</td>
                                 <td className="border px-4 py-2">{item.sub_category}</td>
                                 <td className="border px-4 py-2">
